@@ -23,6 +23,6 @@ def homepage():
 def profile(username):
     # TODO: Make a query for the user with the given username, and send to the
     # template
-    user = User.query.filter_by(username=username).one()
+    user = User.query.filter_by(username=username).first()
     favorite_books = user.favorite_books
     return render_template('profile.html', username=username, books=favorite_books)

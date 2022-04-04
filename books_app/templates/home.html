@@ -5,5 +5,12 @@
 You are visiting the homepage.
 
 <!-- TODO: Display a list of users here, with each linking to their profile -->
+  <ul>
+    {% for user in all_users %}
+      <li>
+        <a href="/profile/{{ user.username }}">{{ user.username }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 
 {% endblock %}
