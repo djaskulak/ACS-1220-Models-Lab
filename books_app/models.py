@@ -29,7 +29,7 @@ class Book(db.Model):
         return f'<Book: {self.title}>'
 
     def __repr__(self):
-        return f'<Book: {self.title}>'
+        return f'<Book: {self.title}, Date Published: {self.publish_date}, Author: {self.author}, Audience: {self.audience}, Genre: {self.genres}>'
 
 class Author(db.Model):
     """Author model."""
